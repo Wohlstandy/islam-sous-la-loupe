@@ -1,0 +1,10 @@
+import Link from 'next/link';
+import { Citations } from '@/components/citations';
+import { pageMeta } from '@/lib/metadata';
+export const metadata=pageMeta('Liberté de conscience','Ressources documentaires et confidentialité pour explorer ses convictions.','/conscience/');
+export default function Page(){return <div className="wrap section"><article className="article">
+ <h1>Liberté de conscience</h1><p>Vous pouvez utiliser cette bibliothèque pour étudier, conserver, modifier ou abandonner une conviction. La consultation ne demande ni compte ni déclaration d’appartenance religieuse.</p>
+ <section><h2>Les textes de référence</h2><p>L’article 18 de la Déclaration universelle protège la liberté de changer de religion ou de conviction. L’article 18 du Pacte protège le choix des convictions et encadre les restrictions à leur manifestation. L’observation générale nº 22 précise que le choix comprend la possibilité d’adopter des vues athées.</p><Citations ids={['onu18','onu-pidcp','onu22']}/></section>
+ <section><h2>Confidentialité sur un appareil partagé</h2><ul><li>Utilisez un profil de navigateur auquel vous seul avez accès, si vous en disposez.</li><li>Le carnet conserve ses données dans le stockage local, sans chiffrement. Effacez les données du site si vous souhaitez les retirer de ce navigateur.</li><li>Vérifiez qui peut lire vos fichiers téléchargés. Les exports contiennent le texte des notes et le nom des dossiers.</li><li>La navigation privée réduit les traces dans le profil de navigateur. Un appareil administré ou le réseau peuvent conserver leurs propres traces.</li></ul><p><Link prefetch={false} href="/outils/#carnet">Gérer le carnet privé</Link></p></section>
+ <section><h2>Trouver un interlocuteur</h2><p>En France, la plateforme du Défenseur des droits accompagne les personnes qui pensent subir une discrimination, notamment en lien avec leurs convictions. La page officielle explique comment contacter ses juristes.</p><a className="underline" href="https://www.antidiscriminations.fr/je-me-fais-aider-par-un-juriste-1">Consulter la plateforme du Défenseur des droits</a></section>
+ </article></div>}
